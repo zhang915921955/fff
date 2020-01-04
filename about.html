@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,intial-scale=0,maximum-scale=0,user-scalable=yes,shrink-to-fit=no",user-scalable=no">
+		<title>about</title>
+	</head>
+	<style>
+		* {
+		    margin: 0;
+		    padding: 0;
+		}
+		
+		.about {
+		    width: 100%;
+		    height: 100%;
+		    overflow: hidden;
+		}
+		
+		.about_bgc {
+		    width: 100%
+		}
+		
+		.about_tit {
+		    position: absolute;
+		    top: 280px;
+		    left: 0;
+		    right: 0;
+		    font-size: 28px;
+		    font-weight: 550;
+		    bottom: 0;
+		    width: 800px;
+		    margin: auto;
+		    text-align: center;
+		}
+		
+		.ribbon {
+		    display: flex;
+		    justify-content: center;
+		    position: absolute;
+		    right: 300px;
+		    top: 50px;
+		    margin: auto;
+		}
+		
+		.ribbon:after,
+		.ribbon:before {
+		    margin-top: 0.5em;
+		    content: "";
+		    display: flex;
+		    ;
+		    border: 1.5em solid #fff;
+		}
+		
+		.ribbon:after {
+		    border-right-color: transparent;
+		}
+		
+		.ribbon:before {
+		    border-left-color: transparent;
+		}
+		
+		.ribbon a:link,
+		.ribbon a:visited {
+		    color: #000;
+		    text-decoration: none;
+		    height: 3.5em;
+		    overflow: hidden;
+		}
+		
+		.ribbon span {
+		    background: #fff;
+		    display: inline-block;
+		    line-height: 3em;
+		    padding: 0 1.5em;
+		    margin-top: 0.5em;
+		    position: relative;
+		    -webkit-transition: background-color 0.2s, margin-top 0.2s;
+		    /* Saf3.2+, Chrome */
+		    -moz-transition: background-color 0.2s, margin-top 0.2s;
+		    /* FF4+ */
+		    -ms-transition: background-color 0.2s, margin-top 0.2s;
+		    /* IE10 */
+		    -o-transition: background-color 0.2s, margin-top 0.2s;
+		    /* Opera 10.5+ */
+		    transition: background-color 0.2s, margin-top 0.2s;
+		}
+		
+		.ribbon a:hover span {
+		    background: orangered;
+		    margin-top: 0;
+		}
+		
+		.ribbon span:before {
+		    content: "";
+		    position: absolute;
+		    top: 3em;
+		    left: 0;
+		    border-right: 0.5em solid #9B8651;
+		    border-bottom: 0.5em solid #fff;
+		}
+		
+		.ribbon span:after {
+		    content: "";
+		    position: absolute;
+		    top: 3em;
+		    right: 0;
+		    border-left: 0.5em solid #9B8651;
+		    border-bottom: 0.5em solid #fff;
+		}
+		
+		.me {
+		    display: flex;
+		    justify-content: center;
+		    margin-top: 60px;
+		    overflow: hidden;
+		}
+		
+		.me_tit {
+		    width: 600px;
+		    line-height: 36px;
+		    font-size: 18px;
+		    margin-left: 100px;
+		    margin-top: 50px;
+		}
+		
+		.me_img {
+		    width: 800px;
+		    height: 600px;
+		}
+		
+		.animate {
+		    padding-left: 20px;
+		    width: 500px;
+		    font-size: 16px;
+		    color: #000;
+		    animation: 10s wordsLoop linear infinite normal;
+		}
+		
+		@keyframes wordsLoop {
+		    0% {
+		        transform: translateY(100px);
+		        -webkit-transform: translateY(100px);
+		    }
+		    100% {
+		        transform: translateY(-100%);
+		        -webkit-transform: translateY(-100%);
+		    }
+		}
+		
+		.videos {
+		    display: flex;
+		    margin-top: 60px;
+		    padding-bottom: 80px;
+		}
+		
+		.videos span {
+		    width: 400px;
+		    margin-right: 100px;
+		    margin-left: 300px;
+		    color: #FFD204
+		}
+	</style>
+	<body>
+		<div class="about">
+		        <h3 class="about_tit">要不断的努力，才能成为更好的自己</h3>
+		        <img class="about_bgc" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1578115590929&di=65b6c3359c39dab3860f126473947f34&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F9%2F59af543c3884f.jpg" alt="">
+		        <div class='ribbon'>
+		            <a href='./index.html'><span>Home</span></a>
+		            <a href='./about.html'><span>About</span></a>
+		            <a href='./login.html'><span>Form</span></a>
+		
+		        </div>
+		        <div class="me">
+		            <img class="me_img" src="./img/imgs19.jpg" alt="">
+		            <span class="me_tit  ">年轻，那么短暂，那么迷茫。
+					如果你不能给自己一张耀眼的文凭一段荡气回肠的爱情，那么，你还可以给自己一个九成九会遭到嘲笑的梦想。
+					因为，总有一天，它会让你闪闪发光.要么承担，要么突破，剩余的时间就是对你的所经历的一切保持沉默。
+					终有一天，这沉默里会获得道路和答案。
+		            </span>
+		        </div>
+		        <div class="videos">
+		            <span>
+						选择或许就悲伤了，或许就苍凉了，但人生容不得半点迟疑。宁愿路遇荆棘，身处逆境，也不愿给自己的青春留有遗憾。
+						从来盛年不重来，一日难再晨；及时当勉励，岁月不待人。
+		            </span>
+<video width="800" controls id="video" preload="auto" height="100%" autoplay="autoplay" loop="loop" type="video/mp4" src="https://apd-73bb5346f03c48da716f2a4fd3f8def4.v.smtcdns.com/om.tc.qq.com/Ay900WMUqsAA39x56lnD8QBzKGXF42ukAIXj6zZFpdIY/uwMROfz2r5zEIaQXGdGnC2dfDmafRkP9ujxgqKjuATzMrE-2/x30432brxbp.mp4?sdtfrom=v1104&guid=dfee44ed6a178c1bb14b77fc3abe3f43&vkey=474FA809B44466CC993D50AA6C6A92DE5D73E3D82697E5846E9C69E78ED9BA4D7AF09E0F9D1FDE5D07B84186FCDAFFE1DACC0C389374A2324ED24A930A7C69921E8CF2DAF90BDC82D9147E38A2D1AB2AA31E166E9E3F6ABAADA94EFF0CF4433344E73AE60F2BA51239A75F585F733325194954B4E19F9272AA138600CC3B39C8"></video>
+		        </div>
+		    </div>
+	</body>
+</html>
