@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,intial-scale=0,maximum-scale=0,user-scalable=yes,shrink-to-fit=no",user-scalable=no">
+		<title>登录</title>
+		<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+	</head>
+	<style type="text/css">
+		* {
+		    margin: 0;
+		    padding: 0
+		}
+		
+		.from {
+		    overflow: hidden;
+		    position: relative;
+		}
+		
+		.bgc {
+		    width: 100%;
+		}
+		
+		.submit {
+		    position: absolute;
+		    z-index: 9;
+		    left: 0;
+		    top: 0;
+		    right: 0;
+		    bottom: 0;
+		    margin: auto;
+		    margin-top: 150px;
+		    width: 500px;
+		    height: 500px;
+		    background: rgba(255, 255, 255, 0.2);
+		    border-radius: 10px;
+		    color: #fff;
+		    display: flex;
+		    flex-direction: column;
+		}
+		
+		.form_title {
+		    text-align: center;
+		    margin-top: 40px;
+		    font-size: 18px;
+		}
+		
+		.form_input {
+		    padding: 0 30px;
+		    box-sizing: border-box;
+		    display: flex;
+		    margin-top: 20px;
+		}
+		
+		.inputs1,.inputs2,.inputs3,.inputs4,.inputs5 {
+		    height: 40px;
+		    width: 300px;
+		    border-radius: 5px;
+		    border: none;
+		    background-color: #eee;
+		    color: #666;
+		    padding-left: 20px;
+		}
+		
+		.form_input span {
+		    width: 85px;
+		    align-self: center;
+		}
+		
+		.btn_submit {
+		    align-self: center;
+		}
+		
+		.btn {
+		    border: none;
+		    width: 80px;
+		    height: 40px;
+		    color: #fff;
+		    border-radius: 5px;
+		    background: #FFD204;
+		    margin-top: 40px;
+		}
+		
+		.btn:hover {
+		    background: #666;
+		}
+		
+		.back {
+		    margin-left: 10px;
+		}
+		
+		.regist {
+		    border: none;
+		    width: 80px;
+		    height: 40px;
+		    color: #fff;
+		    border-radius: 5px;
+		    background: #999;
+		}
+	</style>
+	<body>
+		<div class="from">
+		        <img class="bgc" src="http://abc.2008php.com/2014_Website_appreciate/2014-01-04/20140104012510.jpg" alt="">
+		        <div class="submit">
+		            <span class="form_title">登录</span>
+		            <div class="form_input">
+		                <span>账号：</span>
+		                <input class="inputs1" type="text" value="" placeholder="请输入账号">
+		            </div>
+		            <div class="form_input">
+		                <span>密码:</span>
+		                <input class="inputs2" type="text" value="" placeholder="请输入密码">
+		            </div>
+		            
+		            <div class="btn_submit">
+		                <a href="#">
+		                    <button class="btn">登录</button></a>
+		                <a href="#" class="back"><button class="regist">注册</button></a>
+		            </div>
+		        </div>
+		    </div>
+	</body>
+	<script type="text/javascript">
+			let btn = document.querySelector('.btn');
+			let regist = document.querySelector('.regist');
+			let inputs1 = document.querySelector('.inputs1');
+			let inputs2 = document.querySelector('.inputs2');
+			btn.onclick = function(){
+				$.ajax({
+					url:'https://v1.alapi.cn/api/avatar',
+					dataType:'json',//数据类型
+					type:'GET',//类型
+					data:{
+						email:inputs1.value
+					},
+					success:function(res){
+						
+					}
+				})
+				var rid ='https://v1.alapi.cn/api/avatar?email='+inputs1.value
+				window.location.href="./index.html"+rid;
+			
+			}
+			regist.onclick = function(){
+				alert('暂不支持注册')
+			}
+		
+	</script>
+</html>
